@@ -1,6 +1,6 @@
 .displayContainer{
     display: flex;
-    flex: 6;
+    flex: 9;
     margin-left: .5rem;
     margin-right: 1rem;
     
@@ -15,11 +15,18 @@
 }
 
 .list{
-    width: 350px;
-    margin: 10px;
+    width: 275px;
+    margin: 0px 10px 10px 10px;
     display: flex;
     flex-direction: column;
     background: #fff;
+    border-radius: 4px;
+}
+
+.imageBox {
+    background: #f2f2f2;
+    text-align: center;
+    margin: 10px;
 }
 
 .textcontainer{
@@ -29,19 +36,40 @@
 }
 
 .showImage {
-    margin-left: 25px;
+
 }
 
 .name{
-    font-weight: bold;
+    font-size: 17px;
+    color: #5e66a4;
+    font-weight: 600;
+    padding-bottom: 12px;
 }
 
 .launchyear {
     font-weight: bold;
+    padding-top: 12px;
 }
 
+
+.launchyear1 {
+    font-size: 16px;
+    color: #707cce;
+    list-style-type: disc;
+    padding: 5px 0;
+}
+
+.uili {
+    margin-top: -3px;
+    margin-bottom: -10px;
+}
+
+
 .textcolor {
-    color: #11BCFA;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #707cce;
 }
 
 
@@ -52,5 +80,9 @@
         flex-flow: wrap;
         height: 100vh;
         overflow: auto;
+    }
+    .list {
+        width: 89%;
+        margin: 10px 0px;
     }
 }

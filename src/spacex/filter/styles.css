@@ -1,6 +1,6 @@
 .filterContainer{
     display: flex;
-    flex: 1;
+    flex: 2;
     margin-left: 1rem;
     margin-right: .5rem;
     height: 100%;
@@ -10,16 +10,17 @@
 .displayfilters {
     background: #fff;
     width: 100%;
-}
-
-.filters {
-    font-weight: bold;
-    text-align: left;
-    margin-left: 10px;
+    border-radius: 4px;
+    padding: 10px 14px;
 }
 
 hr {
     width: 50%;
+}
+
+
+.hrtext {
+    width: 60%;
 }
 
 .showfilters {
@@ -31,7 +32,7 @@ hr {
 }
 
 .listitem {
-    background: #c5e384;
+    background: #c5e09b;
     padding: 6px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -39,11 +40,11 @@ hr {
 }
 
 .listitem:hover  {
-    background: #13F571;
+    background:#7bbb32;
 }
 
 .listitem1 {
-    background:#c5e384;
+    background:#c5e09b;
     padding: 6px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -51,19 +52,22 @@ hr {
 }
 
 .listitem1:hover  {
-    background: #13F571;
+    background: #7bbb32;
 }
 
 .listitem2 {
-    background:#c5e384;
+    background:#c5e09b;
     padding: 6px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     cursor: pointer;
 }
+.launchyears {
+    text-align: center;
+}
 
 .listitem2:hover  {
-    background: #13F571;
+    background: #7bbb32;
 }
 
 @media (orientation: portrait) {
@@ -71,10 +75,13 @@ hr {
         display: flex;
         flex: 1 1;
         margin-right: .5rem;
+        margin-left: .5rem;
         height: 100%;
-        overflow: auto;
         justify-content: center;
-    
+        margin-bottom: 10px;
+    }
+    .displayfilters {
+        width: 77%;
     }
 }
 

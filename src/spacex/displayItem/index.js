@@ -14,13 +14,15 @@ import { selectLanding } from '../../redux/filter/filter-action';
                {
                  this.props.data && this.props.data.map( (item, i) => {                
                        return <div key={i} className='list'>
-                        <img src={item.links.mission_patch} height={300} width={300} className={'showImage'} alt='abc'></img>
+                         <div className={'imageBox'}>
+                        <img src={item.links.mission_patch} width={175} className={'showImage'} alt='abc'></img>
+                        </div>
                         <div className={'textcontainer'}>
-                            <div className={'name textcolor'}> {item.mission_name}#{item.flight_number}</div>
+                            <span className={'name'}> {item.mission_name}#{item.flight_number}</span>
                             <div className={'launchyear'}> Mission Ids:</div>
-                            <ul>
+                            <ul className={'uili'}>
                             {item.mission_id.map((val, i) => {
-                              return <li key={i} className={'textcolor'}>{val}</li>
+                              return <li key={i} className={'launchyear1'}>{val}</li>
                             })}
                             </ul>
                           <div className={'launchyear'}> Launch Year: <span className={'textcolor'}>{item.launch_year}</span></div> 

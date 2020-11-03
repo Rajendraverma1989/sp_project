@@ -14,24 +14,23 @@ constructor() {
 }
 
     componentDidMount() {
-        this.fetchData('https://api.spaceXdata.com/v3/launches?limit=100');
+        this.fetchData();
         }
 
         fetchData = async (baseurl) => {
-           let url = baseurl;
+           let url = 'https://api.spaceXdata.com/v3/launches?limit=100';
     
-           if(this.props.filterData.launch === true)
+           if(this.props.filterData.year !== undefined )
            {
-               url = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true';
+               url += '&launch_year='+this.props.filterData.year;
            }
-           if(this.props.filterData.launch === true && this.props.filterData.landing === true)
+           if(this.props.filterData.launch !== undefined)
            {
-               url = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true';
+               url += '&launch_success='+this.props.filterData.launch;
            }
-
-           if(this.props.filterData.launch === true && this.props.filterData.landing === true && this.props.filterData.year)
+           if(this.props.filterData.landing !== undefined)
            {
-               url = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year='+this.props.filterData.year;
+               url += '&land_success='+this.props.filterData.landing;
            }
             if(url!==''){
                 const response = await fetch(url);                

@@ -6,9 +6,9 @@ import './styles.css';
      render() {
     return(
             <nav className="nav-wrapper">
-            <h1>
+            <span className={'headertext'}> 
                 SpaceX Launch Program              
-                </h1>  
+                </span>  
             </nav>  
     )
 }

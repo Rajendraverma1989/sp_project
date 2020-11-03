@@ -9,6 +9,10 @@
     align-items: center;
 }
 
-h1 {
+.headertext{
     margin-left: 1rem;
+    font-size: 22px;
+    color: #000;
+    padding: 10px 0;
+    font-weight: 700;
 }

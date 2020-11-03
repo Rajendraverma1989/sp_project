@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+  margin: 0px 150px;
+  font-family: 'Times';
+  
+}
+
+
+
+@media (orientation: portrait) {
+  .App {
+    margin: 0px;
+  }
 }
 
 .App-logo {

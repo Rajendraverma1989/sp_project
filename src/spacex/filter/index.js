@@ -17,34 +17,34 @@ import { selectLanding } from '../../redux/filter/filter-action';
         for (const key in property) {
             if (property.hasOwnProperty(key)) {
                 const element = property[key];
-                element.style.backgroundColor = '#c5e384';          
+                element.style.backgroundColor = '#c5e09b';      
             }
         }
-        document.getElementById(val).style.backgroundColor='#13F571';
+        document.getElementById(val).style.backgroundColor='#7bbb32';
         this.props.selectYear(val);
         setTimeout(() => {
-            this.props.onClick('');
+            this.props.onClick()
           }, 0);
      }     
 
      onClickLaunch = (val, item) => {
-        document.getElementsByClassName('listitem1')[0].style.backgroundColor = '#c5e384';
-        document.getElementsByClassName('listitem1')[1].style.backgroundColor = '#c5e384';
-        document.getElementsByClassName('listitem1')[val].style.backgroundColor = '#13F571';
+        document.getElementsByClassName('listitem1')[0].style.backgroundColor = '#c5e09b';
+        document.getElementsByClassName('listitem1')[1].style.backgroundColor = '#c5e09b';
+        document.getElementsByClassName('listitem1')[val].style.backgroundColor = '#7bbb32';
         this.props.selectLaunch(item);
         setTimeout(() => {
-            this.props.onClick('');
+            this.props.onClick();
           }, 0);
        
      }
 
      onClickLand = (val, item) => {
-        document.getElementsByClassName('listitem2')[0].style.backgroundColor = '#c5e384';
-        document.getElementsByClassName('listitem2')[1].style.backgroundColor = '#c5e384';
-        document.getElementsByClassName('listitem2')[val].style.backgroundColor = '#13F571';
+        document.getElementsByClassName('listitem2')[0].style.backgroundColor = '#c5e09b';
+        document.getElementsByClassName('listitem2')[1].style.backgroundColor = '#c5e09b';
+        document.getElementsByClassName('listitem2')[val].style.backgroundColor = '#7bbb32';
         this.props.selectLanding(item);
         setTimeout(() => {
-            this.props.onClick('');
+            this.props.onClick();
           }, 0);
      }
 
@@ -53,7 +53,7 @@ import { selectLanding } from '../../redux/filter/filter-action';
             return(
                     <div className= {'filterContainer'}>
                        <div className= {'displayfilters'}>
-                        <div className={'filters'}> Filters</div>
+                        <h4> Filters</h4>
                         <div className={'launchyears'}> Launch Years</div>
                         <hr/>
                         <div className={'showfilters'}>
@@ -67,7 +67,7 @@ import { selectLanding } from '../../redux/filter/filter-action';
                         </div>
 
                         <div className={'launchyears'}> Successful Launch</div>
-                        <hr/>
+                        <hr className={'hrtext'}/>
                         <div className={'showfilters'}>                         
                             <div className={'listitem1'} onClick= {() => this.onClickLaunch(0, true)}>
                                 True
@@ -78,7 +78,7 @@ import { selectLanding } from '../../redux/filter/filter-action';
                         </div>
 
                         <div className={'launchyears'}> Successful Landing</div>
-                        <hr/>
+                        <hr className={'hrtext'} />
                         <div className={'showfilters'}>                       
                             <div className={'listitem2'} onClick= {() => this.onClickLand(0, true)}>
                                 True
