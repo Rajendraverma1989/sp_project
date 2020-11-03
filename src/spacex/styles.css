@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+}
+
+@media (orientation: portrait) {
+    .container {
+      flex-direction: column;
+    }
+}

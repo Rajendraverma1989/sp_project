@@ -1,0 +1,56 @@
+.displayContainer{
+    display: flex;
+    flex: 6;
+    margin-left: .5rem;
+    margin-right: 1rem;
+    
+}
+
+.displayitem {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    height: 100vh;
+    overflow:auto;
+}
+
+.list{
+    width: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.textcontainer{
+    text-align: left;
+    margin: 10px;
+    text-align: left;
+}
+
+.showImage {
+    margin-left: 25px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.launchyear {
+    font-weight: bold;
+}
+
+.textcolor {
+    color: #11BCFA;
+}
+
+
+@media (orientation: portrait) {
+    .displayitem {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        height: 100vh;
+        overflow: auto;
+    }
+}

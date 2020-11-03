@@ -1,13 +1,14 @@
 import './App.css';
 import Header from './Header/header';
+import Footer from './Footer/footer';
 import { SpaceX } from './spacex/index';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-    Hello Rajendra verma bangalore
-    <SpaceX/>
+      <SpaceX/>
+      <Footer/>
     </div>
   );
 }
