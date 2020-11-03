@@ -80,6 +80,7 @@
         flex-flow: wrap;
         height: 100vh;
         overflow: auto;
+        width: 100%;
     }
     .list {
         width: 89%;
